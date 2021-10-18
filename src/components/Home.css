@@ -1,0 +1,12 @@
+.home {
+    background-color: #f0e9e9;
+}
+.home__product__list1{
+    display: flex;
+    justify-content: space-around;
+}
+.home__product__list2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
