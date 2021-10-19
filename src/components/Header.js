@@ -6,7 +6,7 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function Header() {
     return (
-        <div className="header">
+        <div className="header fix__top">
             <div className="header__left">
                 <Link to="/">
                     Shoppinng
