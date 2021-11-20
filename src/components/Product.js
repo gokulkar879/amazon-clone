@@ -1,6 +1,21 @@
 import React from 'react'
+import { useGlobalContext } from '../context'
 import './Product.css'
 function Product({id, image, price, rating, title, block}) {
+    const [state, dispatch] = useGlobalContext()
+    const addtoBasket = () => {
+        const action = {
+            type: "ADD_TO_BASKET",
+            item: {
+                id: id,
+                title: title,
+                price: price,
+                rating: rating,
+                image: image
+            }
+        }
+        dispatch(action)
+    }
     return (
         <div className={`product ${block===1?'one':'two'}`}>
             <div className="product__top">
@@ -18,7 +33,7 @@ function Product({id, image, price, rating, title, block}) {
                 }
             </div>
                 <img src={image}></img>
-                <button className="product__btn"    >Add to cart</button>
+                <button className="product__btn" onClick={addtoBasket}>Add to cart</button>
 
         </div>
     )

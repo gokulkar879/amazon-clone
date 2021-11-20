@@ -1,0 +1,32 @@
+.cart {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #EAEDED;
+}
+.cart__center {
+    padding: 40px;
+}
+.cart_ {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cart__items {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__total {
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid black */
+}
+.cart__total p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+}

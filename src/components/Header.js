@@ -3,8 +3,10 @@ import './Header.css'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import { useGlobalContext } from '../context';
 
 function Header() {
+    const [state, dispatch] = useGlobalContext()
     return (
         <div className="header fix__top">
             <div className="header__left">
@@ -39,7 +41,7 @@ function Header() {
                 }}>
                     Orders
                 </Link>
-                <Link to="/" style={{
+                <Link to="/cart" style={{
                     "fontSize":"1.3rem",
                     "color":"white",
                     "textDecoration":"none",
@@ -47,6 +49,9 @@ function Header() {
                     "marginRight":"25px"
                 }}>
                     <ShoppingBasketIcon />
+                    <span style={{
+                        marginLeft: "10px"
+                    }}>{state.total_items}</span>
                 </Link>
             </div>
             {/* side components */}
